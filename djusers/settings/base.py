@@ -6,6 +6,7 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 #BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
+
 with open("secret.json") as f:
     secret = json.loads(f.read())
 
@@ -18,7 +19,6 @@ def get_secret(secret_name, secrets=secret):
 
 
 SECRET_KEY = get_secret("SECRET_KEY")
-
 
 # Application definition
 
